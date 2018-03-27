@@ -104,7 +104,6 @@
 </div>
 <br>
 <?php
-set_time_limit(0);
 if(!isset($_POST['pass']) or !isset($_POST['id']) or !isset($_POST['start'])){
 	die();
 }
