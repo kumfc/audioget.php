@@ -79,10 +79,10 @@ function s(t, e) {
 var player, playPromise, gTimer, aid;
 function play(url, item){
 	if (playPromise) {
-    playPromise.then(_ => {
-        realPlay(url, item);
-		playPromise = 0;
-    })
+		playPromise.then(_ => {
+			realPlay(url, item);
+			playPromise = 0;
+		})
   } else {
 	realPlay(url, item);
   }
