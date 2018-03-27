@@ -113,7 +113,7 @@ function realPlay(url, item){
 				removeTimer(prev);
 			}
 			var realurl = ShitConvert(url);
-    	    player = new Audio(realurl);
+    	    		player = new Audio(realurl);
 			aid = item.getAttribute('data-aid');
 			player.addEventListener("ended", function(){
 				let next = document.querySelectorAll('[data-aid="'+(parseInt(aid)+1)+'"]')[0];
@@ -123,7 +123,7 @@ function realPlay(url, item){
 					document.querySelectorAll('[data-aid="1"]')[0].click();
 				}
 			});
-    	    playPromise = player.play();
+    	    	playPromise = player.play();
 			startTimer(item);
 		}
 		item.setAttribute('style', 'background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%235181B8%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M8%207.596c0-.33.277-.596.607-.596h1.786c.335%200%20.607.267.607.596v8.808a.605.605%200%200%201-.607.596H8.607A.602.602%200%200%201%208%2016.404V7.596zm5%200c0-.33.277-.596.607-.596h1.786c.335%200%20.607.267.607.596v8.808a.605.605%200%200%201-.607.596h-1.786a.602.602%200%200%201-.607-.596V7.596z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");');
@@ -135,20 +135,20 @@ function startTimer(item){
 	let pl = item.parentElement.getElementsByClassName('audio_row__duration')[0],
 	    dur = item.getAttribute('data-duration');
 	$("#audio"+aid).slider({
-        orientation: "horizontal",
-        range: "min",
-        max: dur,
-        change: refreshSlider
-    });
+            orientation: "horizontal",
+            range: "min",
+            max: dur,
+            change: refreshSlider
+   	});
 	gTimer = {
 		place: pl,
-	    maxTime: pl.innerHTML,
+	        maxTime: pl.innerHTML,
 		duration: dur,
-	    timerInterval: setInterval(function(){processTimer();}, 1000)
+	        timerInterval: setInterval(function(){processTimer();}, 1000)
 	};
 }
 function removeTimer(item){
-    clearInterval(gTimer.timerInterval);
+        clearInterval(gTimer.timerInterval);
 	let pl = item.parentElement.getElementsByClassName('audio_row__duration')[0];
 	$("#audio"+aid).slider("destroy");
 	pl.innerHTML = gTimer.maxTime;
@@ -180,12 +180,12 @@ function refreshSlider(){
 
 function nextPage(){
 	var sid = document.getElementsByName('start')[0];
-    sid.value = parseInt(sid.value) + 90;
+        sid.value = parseInt(sid.value) + 90;
 	document.getElementById('shorten_btn').click();
 }
 function prevPage(){
 	var sid = document.getElementsByName('start')[0];
-    sid.value = parseInt(sid.value) - 90;
+        sid.value = parseInt(sid.value) - 90;
 	document.getElementById('shorten_btn').click();
 }
 
@@ -193,7 +193,7 @@ function prevPage(){
 
 function download(url){
     var realurl = ShitConvert(url);
-	var link = document.createElement("a");
+    var link = document.createElement("a");
     link.download = true;
     link.href = realurl;
     document.body.appendChild(link);
