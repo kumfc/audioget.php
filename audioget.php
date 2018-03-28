@@ -152,6 +152,9 @@ for ($i2 = 0; $i2 < 10; $i2++) {
 	}
 	$pContent = curl('https://vk.com/al_audio.php?act=reload_audio&al=1&ids='.urlencode($list));
 	$json = json_decode(GetBetween($pContent, '<!json>', '<!>'), true);
+	if(!$json){
+		continue;
+	}
 	foreach($json as $audio){
 		$aId++;
 	    $url = $audio[2];
