@@ -192,11 +192,6 @@ function prevPage(){
 ///////////////////////
 
 function download(url){
-    var realurl = ShitConvert(url);
-    var link = document.createElement("a");
-    link.download = true;
-    link.href = realurl;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+   	var realurl = ShitConvert(url);
+	window.open(realurl, '_blank');
 }
