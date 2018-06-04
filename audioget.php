@@ -1,7 +1,7 @@
 <head><title>real shit</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" href="https://vk.com/css/al/uncommon.css">
 <link rel="stylesheet" href="https://vk.com/css/al/page.css">
-<link rel="stylesheet" href="https://vk.com/css/al/common.css">
+<link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="https://vk.com/css/al/wkview.css">
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
