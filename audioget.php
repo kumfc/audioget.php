@@ -62,7 +62,7 @@
 		padding: 10px;
 		background: #39b54a;
 	}
-	.slider {
+	.slider { 
 		float: left;
 		clear: left;
 		width: 300px;
