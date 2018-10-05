@@ -148,7 +148,7 @@ $aId = 0;
 for ($i2 = 0; $i2 < 10; $i2++) {
 	$list = '';
 	for ($i = 0; $i < 9; $i++) {
-		$list = $list.$id.'_'.($astart+$i+$i2*9).',';
+		$list = $list.$id.'_'.($astart+$i+$i2*9).'_'.rand(1, 10000000).',';
 	}
 	$pContent = curl('https://vk.com/al_audio.php?act=reload_audio&al=1&ids='.urlencode($list));
 	$json = json_decode(GetBetween($pContent, '<!json>', '<!>'), true);
