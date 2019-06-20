@@ -1,7 +1,4 @@
 # audioget.php
-VK audio parser
+This script was used to parse private audio lists from VK profiles. This method is already **fixed**.
 
 Guide: https://vk.com/@kumfc-audioget
-
-
-(за кодстайл извени)
